@@ -5,8 +5,8 @@ import { useRef } from 'react'
 import { ArrowRight } from 'lucide-react'
 
 const stats = [
-  { value: '5,000+', label: 'Students supported' },
-  { value: '50+', label: 'University partners' },
+  { value: '5,000+', label: 'Students connected' },
+  { value: '20+', label: 'Zambian universities' },
   { value: '200+', label: 'Opportunities listed' },
 ]
 
@@ -34,7 +34,7 @@ export default function HeroSection() {
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-600/10 border border-blue-600/20 text-blue-600 dark:text-blue-400 text-xs font-semibold mb-8"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
-          The future of student success
+          The social network for Zambian students
         </motion.div>
 
         {/* Headline */}
@@ -44,9 +44,9 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] text-navy-900 dark:text-white"
         >
-          Empowering students
+          Where Zambian students
           <br />
-          <span className="text-gradient">beyond the classroom</span>
+          <span className="text-gradient">connect and grow</span>
         </motion.h1>
 
         {/* Value proposition */}
@@ -56,8 +56,8 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-xl mx-auto mt-6 text-lg text-navy-500 dark:text-navy-300 leading-relaxed"
         >
-          UNIVO connects students with educational opportunities, career guidance,
-          scholarships, and innovation programs across Africa.
+          UNIVO is the social network helping students across Zambia connect with peers,
+          discover opportunities, find scholarships, and build their futures together.
         </motion.p>
 
         {/* CTAs */}

@@ -5,10 +5,10 @@ import { motion, useInView } from 'framer-motion'
 import { TrendingUp, Building2, Share2, HeartHandshake } from 'lucide-react'
 
 const stats = [
-  { icon: TrendingUp, value: 5000, suffix: '+', label: 'Students supported', desc: 'Active students benefiting from UNIVO programs and resources' },
-  { icon: Building2, value: 50, suffix: '+', label: 'Universities connected', desc: 'Partner institutions across Africa and beyond' },
+  { icon: TrendingUp, value: 5000, suffix: '+', label: 'Students connected', desc: 'Active students on the UNIVO social network across Zambia' },
+  { icon: Building2, value: 20, suffix: '+', label: 'Zambian universities', desc: 'Partner institutions from Lusaka to the Copperbelt' },
   { icon: Share2, value: 200, suffix: '+', label: 'Opportunities shared', desc: 'Scholarships, internships and programs listed monthly' },
-  { icon: HeartHandshake, value: 10000, suffix: '+', label: 'Community members', desc: 'Growing network of ambitious students and mentors' },
+  { icon: HeartHandshake, value: 10000, suffix: '+', label: 'Community members', desc: 'Growing network of ambitious Zambian students and mentors' },
 ]
 
 function CountUp({ target, suffix, inView }: { target: number; suffix: string; inView: boolean }) {
@@ -52,7 +52,7 @@ export default function ImpactSection() {
             Numbers that tell our story
           </h2>
           <p className="max-w-xl mx-auto mt-4 text-lg text-navy-500 dark:text-navy-300">
-            Every statistic represents a student whose life we have touched, an opportunity unlocked.
+            Every statistic represents a Zambian student whose life we have touched, an opportunity unlocked.
           </p>
         </motion.div>
 

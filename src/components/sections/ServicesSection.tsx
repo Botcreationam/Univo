@@ -5,11 +5,11 @@ import { useRef } from 'react'
 import { BookOpen, Briefcase, Award, Rocket, Users, Laptop, ArrowUpRight } from 'lucide-react'
 
 const services = [
-  { icon: BookOpen, title: 'Academic Support', desc: 'Tutoring, study resources, academic mentorship and peer-learning networks to help you excel.', tag: 'Core' },
-  { icon: Briefcase, title: 'Career Development', desc: 'Resume building, interview prep, internship placements and direct connections to employers.', tag: 'Popular' },
-  { icon: Award, title: 'Scholarships', desc: 'Curated scholarship database with application guidance and direct submission support.', tag: 'High Demand' },
-  { icon: Rocket, title: 'Innovation Programs', desc: 'Hackathons, startup accelerators, and innovation challenges for student entrepreneurs.', tag: 'New' },
-  { icon: Users, title: 'Student Networking', desc: 'Connect with peers, alumni, mentors, and industry professionals across Africa and beyond.', tag: 'Community' },
+  { icon: Users, title: 'Student Social Network', desc: 'Connect with peers across Zambian universities, share experiences, join study groups, and build your network.', tag: 'Core' },
+  { icon: BookOpen, title: 'Academic Support', desc: 'Tutoring, study resources, academic mentorship and peer-learning networks to help you excel.', tag: 'Essential' },
+  { icon: Briefcase, title: 'Career Development', desc: 'Resume building, interview prep, internship placements and direct connections to employers in Zambia.', tag: 'Popular' },
+  { icon: Award, title: 'Scholarships', desc: 'Curated scholarship database with application guidance and direct submission support for Zambian students.', tag: 'High Demand' },
+  { icon: Rocket, title: 'Innovation Programs', desc: 'Hackathons, startup accelerators, and innovation challenges for student entrepreneurs in Zambia.', tag: 'New' },
   { icon: Laptop, title: 'Digital Resources', desc: 'E-books, online courses, research tools and digital learning materials all in one place.', tag: 'Essential' },
 ]
 
@@ -28,10 +28,10 @@ export default function ServicesSection() {
         >
           <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Services</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
-            Everything a student needs to thrive
+            Everything a Zambian student needs
           </h2>
           <p className="mt-5 text-lg text-navy-500 dark:text-navy-300">
-            Six pillars of student success, designed to work together as one unified platform.
+            A social network and platform designed for student success in Zambia.
           </p>
         </motion.div>
 

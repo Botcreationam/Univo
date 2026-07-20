@@ -6,36 +6,32 @@ import { Quote, ChevronLeft, ChevronRight, Star } from 'lucide-react'
 
 const testimonials = [
   {
-    name: 'Amara Diallo',
-    role: 'Computer Science, University of Nairobi',
-    country: 'Kenya',
-    quote: 'UNIVO connected me to a scholarship I never would have found on my own. Now I am completing my masters fully funded. This platform changed my life trajectory completely.',
+    name: 'Chipo Banda',
+    role: 'Computer Science, University of Zambia',
+    quote: 'UNIVO helped me find a scholarship I never knew existed. Now I am completing my masters fully funded. This platform changed everything for me.',
     stars: 5,
-    initials: 'AD',
+    initials: 'CB',
   },
   {
-    name: 'Kwame Asante',
-    role: 'Engineering Student, KNUST',
-    country: 'Ghana',
-    quote: 'The career development resources helped me land an internship at a top tech firm after just two months on the platform. The resume review and mock interviews were invaluable.',
+    name: 'Mulenga Phiri',
+    role: 'Engineering Student, Copperbelt University',
+    quote: 'The career resources helped me land an internship at a top Zambian tech firm after just two months on the platform. The resume review was invaluable.',
     stars: 5,
-    initials: 'KA',
+    initials: 'MP',
   },
   {
-    name: 'Zainab Okonkwo',
-    role: 'Business Administration, UI',
-    country: 'Nigeria',
-    quote: 'The networking opportunities on UNIVO are unlike anything else. I connected with a mentor who helped me launch my first startup while still in school. Incredible community.',
+    name: 'Natasha Zulu',
+    role: 'Business Administration, ZCAS',
+    quote: 'The networking on UNIVO is unlike anything else in Zambia. I connected with a mentor who helped me launch my first startup while still in school.',
     stars: 5,
-    initials: 'ZO',
+    initials: 'NZ',
   },
   {
-    name: 'Tendai Moyo',
-    role: 'Medical Student, UZ',
-    country: 'Zimbabwe',
-    quote: 'As a medical student, finding research opportunities was my biggest challenge. UNIVO surfaced a research internship at a top hospital, something I could never have found alone.',
+    name: 'Joseph Mwale',
+    role: 'Medical Student, Copperbelt University',
+    quote: 'Finding research opportunities was my biggest challenge. UNIVO surfaced a research internship at a top hospital, something I could never have found alone.',
     stars: 5,
-    initials: 'TM',
+    initials: 'JM',
   },
 ]
 
@@ -62,7 +58,7 @@ export default function TestimonialsSection() {
         >
           <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Stories</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
-            Real students, real impact
+            Real Zambian students, real impact
           </h2>
         </motion.div>
 

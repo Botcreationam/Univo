@@ -59,8 +59,8 @@ export default function ContactSection() {
             className="lg:col-span-2 space-y-8"
           >
             {[
-              { icon: Mail, label: 'Email', value: 'hello@univo.africa' },
-              { icon: MapPin, label: 'Location', value: 'Lusaka, Zambia. Pan-African.' },
+              { icon: Mail, label: 'Email', value: 'hello@univo.zm' },
+              { icon: MapPin, label: 'Location', value: 'Lusaka, Zambia' },
               { icon: Clock, label: 'Response Time', value: 'Within 24 hours' },
             ].map(({ icon: Icon, label, value }) => (
               <div key={label} className="flex items-center gap-4">
@@ -102,7 +102,7 @@ export default function ContactSection() {
                   <input
                     id="email"
                     type="email"
-                    placeholder="you@university.edu"
+                    placeholder="you@university.edu.zm"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg bg-navy-50 dark:bg-white/5 border border-navy-200 dark:border-white/10 text-navy-900 dark:text-white placeholder-navy-300 dark:placeholder-navy-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600/30 transition-all text-sm"

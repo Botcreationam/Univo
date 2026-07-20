@@ -7,29 +7,29 @@ import { Globe, Handshake, Lightbulb, Plane } from 'lucide-react'
 const roadmap = [
   {
     year: '2026',
-    title: 'Regional Expansion',
-    desc: 'Scale UNIVO to 20 African countries with localized content and opportunities for students in every major university city.',
+    title: 'National Growth',
+    desc: 'Connect every university in Zambia, from Lusaka to the Copperbelt, with localized content and opportunities for students nationwide.',
     icon: Globe,
     status: 'In Progress',
   },
   {
     year: '2027',
     title: 'Strategic Partnerships',
-    desc: 'Partner with 500+ universities, NGOs, corporations, and governments to create a verified pipeline of student opportunities.',
+    desc: 'Partner with 100+ Zambian universities, NGOs, corporations, and government bodies to create a verified pipeline of student opportunities.',
     icon: Handshake,
     status: 'Upcoming',
   },
   {
     year: '2028',
     title: 'Student Innovation Hub',
-    desc: 'Launch physical and virtual innovation spaces where UNIVO students can build, collaborate, and launch startups together.',
+    desc: 'Launch physical and virtual innovation spaces where Zambian students can build, collaborate, and launch startups together.',
     icon: Lightbulb,
     status: 'Planned',
   },
   {
     year: '2029',
-    title: 'International Opportunities',
-    desc: 'Open global doors by connecting African students with international scholarships, exchange programs, and global employers.',
+    title: 'International Expansion',
+    desc: 'Take UNIVO beyond Zambia, connecting students across Southern Africa and eventually globally with international scholarships and exchange programs.',
     icon: Plane,
     status: 'Vision',
   },
@@ -57,10 +57,10 @@ export default function VisionSection() {
         >
           <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Vision</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
-            Where we are heading next
+            From Zambia to the world
           </h2>
           <p className="mt-5 text-lg text-navy-500 dark:text-navy-300">
-            Our vision is bold: a world where every African student has equal access to world-class educational opportunities.
+            Our vision starts in Zambia. We are building the foundation here first, with plans to expand internationally in the years ahead.
           </p>
         </motion.div>
 

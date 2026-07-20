@@ -14,21 +14,21 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://univo.vercel.app'),
-  title: 'UNIVO | Empowering Students Beyond the Classroom',
-  description: 'UNIVO connects students with educational opportunities, career guidance, scholarships, and innovation programs across Africa.',
-  keywords: ['student platform', 'education', 'scholarships', 'career guidance', 'Africa', 'UNIVO'],
+  title: 'UNIVO | The Social Network for Zambian Students',
+  description: 'UNIVO is the social network connecting students across Zambia with peers, opportunities, scholarships, career guidance, and innovation programs.',
+  keywords: ['student platform', 'social network', 'Zambia', 'education', 'scholarships', 'career guidance', 'UNIVO'],
   authors: [{ name: 'UNIVO' }],
   openGraph: {
-    title: 'UNIVO | Empowering Students Beyond the Classroom',
-    description: 'Connecting students with opportunities, career guidance, and innovation programs across Africa.',
+    title: 'UNIVO | The Social Network for Zambian Students',
+    description: 'The social network connecting students across Zambia with peers, opportunities, and innovation programs.',
     type: 'website',
     locale: 'en_US',
     siteName: 'UNIVO',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'UNIVO | Empowering Students',
-    description: 'Connecting students with opportunities across Africa.',
+    title: 'UNIVO | The Social Network for Zambian Students',
+    description: 'Connecting students across Zambia with peers and opportunities.',
   },
   robots: { index: true, follow: true },
 }

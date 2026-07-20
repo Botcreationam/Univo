@@ -10,24 +10,24 @@ const REDIRECT_URL = 'https://studentlife.tech'
 const features = [
   {
     badge: 'For Students',
-    title: 'Your personal academic command center',
-    desc: 'Everything you need to manage your academic journey, from finding the right scholarships to connecting with mentors who have been exactly where you are.',
+    title: 'Your social campus in your pocket',
+    desc: 'Connect with fellow students across Zambian universities, join study groups, share resources, and build friendships that last beyond graduation.',
     points: [
-      'Smart scholarship matching based on your profile',
-      'One-click application tracking dashboard',
-      'Direct mentorship connections with alumni',
-      'Personalized resource recommendations',
+      'Connect with students from UNZA, CBU, ZCAS, and more',
+      'Join study groups by subject and university',
+      'Share notes, resources, and experiences',
+      'Build your network before you graduate',
     ],
     reverse: false,
   },
   {
     badge: 'Career Ready',
     title: 'Bridge the gap between campus and career',
-    desc: 'Our career development programs connect you with real opportunities, from internships at top companies to full-time roles that match your ambitions.',
+    desc: 'Our career development tools connect you with real opportunities, from internships at top Zambian companies to full-time roles that match your ambitions.',
     points: [
       'AI-powered resume optimization',
       'Mock interviews with industry professionals',
-      '500+ employer partnerships across Africa',
+      'Employer partnerships across Zambia',
       'Real-time job and internship alerts',
     ],
     reverse: true,
@@ -35,10 +35,10 @@ const features = [
   {
     badge: 'Community',
     title: 'Grow through genuine connections',
-    desc: 'The most powerful networks are not built overnight. We make it easy to find your tribe of ambitious students, supportive alumni, and industry leaders.',
+    desc: 'The most powerful networks are not built overnight. We make it easy to find your tribe of ambitious Zambian students, supportive alumni, and industry leaders.',
     points: [
       'Peer study groups by subject and university',
-      'Alumni network with 2,000+ professionals',
+      'Alumni network with Zambian professionals',
       'Industry events and virtual networking sessions',
       'Student-led communities and chapters',
     ],
@@ -53,7 +53,7 @@ export default function FeaturesSection() {
         <div className="max-w-2xl mb-20">
           <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Features</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
-            Built for how students actually succeed
+            Built for how Zambian students succeed
           </h2>
         </div>
 
@@ -131,7 +131,7 @@ function FeatureVisual({ index }: { index: number }) {
   if (index === 0) {
     return (
       <div className="w-full space-y-3">
-        {['Scholarship Match: 94%', 'Applications: 3 Active', 'Mentor Sessions: 2 this week', 'Resources Saved: 12'].map((item, i) => (
+        {['UNZA Computer Science', 'CBU Engineering Group', 'ZCAS Study Circle', 'Mulungushi Resources'].map((item, i) => (
           <div key={i} className="flex items-center gap-3 p-4 rounded-lg bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10">
             <div className="w-2 h-2 rounded-full bg-blue-600" />
             <span className="text-navy-600 dark:text-navy-300 text-sm">{item}</span>

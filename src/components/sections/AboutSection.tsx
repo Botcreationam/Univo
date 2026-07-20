@@ -5,18 +5,18 @@ import { useRef } from 'react'
 import { Target, Eye, Users, Lightbulb } from 'lucide-react'
 
 const values = [
-  { icon: Target, title: 'Mission', desc: 'Break barriers and connect every student to the tools, networks, and opportunities they need to thrive.' },
-  { icon: Eye, title: 'Vision', desc: 'A world where every student, regardless of background, has access to transformative educational opportunities.' },
-  { icon: Users, title: 'Community First', desc: 'We build with students, not just for them. Every feature is shaped by real student feedback and needs.' },
-  { icon: Lightbulb, title: 'Innovation', desc: 'We challenge the status quo with creative, tech-driven solutions to age-old educational barriers.' },
+  { icon: Target, title: 'Mission', desc: 'Build the social network that connects every Zambian student to the tools, networks, and opportunities they need to thrive.' },
+  { icon: Eye, title: 'Vision', desc: 'Start in Zambia. Grow to the world. A platform where every student has access to transformative educational opportunities.' },
+  { icon: Users, title: 'Community First', desc: 'We build with students, not just for them. Every feature is shaped by real Zambian student feedback and needs.' },
+  { icon: Lightbulb, title: 'Innovation', desc: 'We challenge the status quo with creative, tech-driven solutions to age-old educational barriers in Zambia.' },
 ]
 
 const timeline = [
-  { year: '2022', title: 'Founded', desc: 'UNIVO was born from a vision to democratize student opportunity access across Africa.' },
-  { year: '2023', title: 'First Community', desc: 'Launched our first student community with 500 members across 5 universities.' },
-  { year: '2024', title: 'Platform Launch', desc: 'Full digital platform goes live, connecting students to scholarships and career resources.' },
-  { year: '2025', title: 'Regional Expansion', desc: 'Expanded to 10 countries, with 5,000 students supported and 50 university partnerships.' },
-  { year: '2026', title: 'Innovation Hub', desc: 'Launching the UNIVO Student Innovation Hub for the next generation of African entrepreneurs.' },
+  { year: '2022', title: 'Founded', desc: 'UNIVO was born from a vision to build a social network for Zambian students.' },
+  { year: '2023', title: 'First Community', desc: 'Launched our first student community with 500 members across 5 universities in Lusaka.' },
+  { year: '2024', title: 'Platform Launch', desc: 'Full social platform goes live, connecting students to scholarships, peers, and career resources.' },
+  { year: '2025', title: 'National Growth', desc: 'Expanded to 20+ universities across Zambia, with 5,000 students connected and growing fast.' },
+  { year: '2026', title: 'Innovation Hub', desc: 'Launching the UNIVO Student Innovation Hub for the next generation of Zambian entrepreneurs.' },
 ]
 
 export default function AboutSection() {
@@ -38,8 +38,8 @@ export default function AboutSection() {
             We exist to unlock potential
           </h2>
           <p className="mt-5 text-lg text-navy-500 dark:text-navy-300 leading-relaxed">
-            UNIVO is a student-focused digital platform bridging the gap between ambition and opportunity,
-            giving every student the resources, community, and guidance to succeed.
+            UNIVO is a social network built for Zambian students, bridging the gap between ambition and opportunity,
+            giving every student the community, resources, and guidance to succeed.
           </p>
         </motion.div>
 

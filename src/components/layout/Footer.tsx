@@ -26,7 +26,7 @@ const footerLinks = {
 const socials = [
   { icon: GitBranch, href: 'https://github.com/Botcreationam/Univo', label: 'GitHub' },
   { icon: Link, href: 'https://www.linkedin.com', label: 'LinkedIn' },
-  { icon: Globe, href: 'https://univo.africa', label: 'Website' },
+  { icon: Globe, href: 'https://studentlife.tech', label: 'Website' },
   { icon: Mail, href: '#contact', label: 'Email' },
 ]
 
@@ -52,7 +52,7 @@ export default function Footer() {
               <span className="text-lg font-bold text-white">UNIVO</span>
             </div>
             <p className="text-navy-300 text-sm leading-relaxed mb-6 max-w-xs">
-              Empowering students beyond the classroom. Connecting talent with opportunity across Africa and beyond.
+              The social network for Zambian students. Connecting talent with opportunity, starting in Zambia with plans to grow globally.
             </p>
             <div className="flex items-center gap-2">
               {socials.map(({ icon: Icon, href, label }) => (
@@ -90,7 +90,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-navy-400 text-sm">
-            © {new Date().getFullYear()} UNIVO. All rights reserved.
+            © {new Date().getFullYear()} UNIVO. Built in Zambia. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-sm text-navy-400">
             <button className="hover:text-white transition-colors">Privacy</button>
