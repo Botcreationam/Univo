@@ -47,7 +47,7 @@ export default function ImpactSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Impact</span>
+          <span className="text-sm font-semibold text-brand-500 dark:text-brand-400 uppercase tracking-wider">Impact</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
             Numbers that tell our story
           </h2>
@@ -63,10 +63,10 @@ export default function ImpactSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
-              className="p-8 rounded-xl bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10 text-center card-hover hover:border-blue-600/30"
+              className="p-8 rounded-xl bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10 text-center card-hover hover:border-brand-500/30"
             >
-              <div className="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center mx-auto mb-5">
-                <stat.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              <div className="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mx-auto mb-5">
+                <stat.icon className="w-5 h-5 text-brand-500 dark:text-brand-400" />
               </div>
               <div className="text-3xl md:text-4xl font-bold text-navy-900 dark:text-white mb-2">
                 <CountUp target={stat.value} suffix={stat.suffix} inView={inView} />

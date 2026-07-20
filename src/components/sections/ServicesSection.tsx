@@ -2,15 +2,15 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { BookOpen, Briefcase, Award, Rocket, Users, Laptop, ArrowUpRight } from 'lucide-react'
+import { BookOpen, Briefcase, Award, Rocket, Users, ShoppingBag, Brain, ArrowUpRight } from 'lucide-react'
 
 const services = [
-  { icon: Users, title: 'Student Social Network', desc: 'Connect with peers across Zambian universities, share experiences, join study groups, and build your network.', tag: 'Core' },
-  { icon: BookOpen, title: 'Academic Support', desc: 'Tutoring, study resources, academic mentorship and peer-learning networks to help you excel.', tag: 'Essential' },
-  { icon: Briefcase, title: 'Career Development', desc: 'Resume building, interview prep, internship placements and direct connections to employers in Zambia.', tag: 'Popular' },
-  { icon: Award, title: 'Scholarships', desc: 'Curated scholarship database with application guidance and direct submission support for Zambian students.', tag: 'High Demand' },
-  { icon: Rocket, title: 'Innovation Programs', desc: 'Hackathons, startup accelerators, and innovation challenges for student entrepreneurs in Zambia.', tag: 'New' },
-  { icon: Laptop, title: 'Digital Resources', desc: 'E-books, online courses, research tools and digital learning materials all in one place.', tag: 'Essential' },
+  { icon: Users, title: 'Campus Community', desc: 'Connect with peers across Zambian universities, join communities, share experiences, and build your network.', tag: 'Core' },
+  { icon: Brain, title: 'AI Study Center', desc: 'AI-powered study tools, personalized learning paths, and smart recommendations to help you excel academically.', tag: 'New' },
+  { icon: ShoppingBag, title: 'Marketplace', desc: 'Buy and sell textbooks, supplies, and services within a trusted student-only marketplace across Zambia.', tag: 'Popular' },
+  { icon: BookOpen, title: 'Study Tools', desc: 'Access shared notes, past papers, study guides, and collaborative learning resources all in one place.', tag: 'Essential' },
+  { icon: Briefcase, title: 'Opportunities', desc: 'Discover scholarships, internships, jobs, and programs curated for Zambian students and graduates.', tag: 'High Demand' },
+  { icon: Award, title: 'Innovation Programs', desc: 'Hackathons, startup accelerators, and innovation challenges for student entrepreneurs in Zambia.', tag: 'Community' },
 ]
 
 export default function ServicesSection() {
@@ -26,12 +26,12 @@ export default function ServicesSection() {
           transition={{ duration: 0.5 }}
           className="max-w-2xl mb-20"
         >
-          <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Services</span>
+          <span className="text-sm font-semibold text-brand-500 dark:text-brand-400 uppercase tracking-wider">Services</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
             Everything a Zambian student needs
           </h2>
           <p className="mt-5 text-lg text-navy-500 dark:text-navy-300">
-            A social network and platform designed for student success in Zambia.
+            Campus, communities, study tools, marketplace, and opportunities. All in one platform.
           </p>
         </motion.div>
 
@@ -42,17 +42,17 @@ export default function ServicesSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.05 * i }}
-              className="group p-8 rounded-xl bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10 card-hover hover:border-blue-600/30 cursor-pointer"
+              className="group p-8 rounded-xl bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10 card-hover hover:border-brand-500/30 cursor-pointer"
             >
               <div className="flex items-center justify-between mb-5">
-                <div className="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center">
-                  <service.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <div className="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center">
+                  <service.icon className="w-5 h-5 text-brand-500 dark:text-brand-400" />
                 </div>
                 <span className="text-xs font-medium text-navy-400 dark:text-navy-500 uppercase tracking-wider">{service.tag}</span>
               </div>
               <h3 className="font-semibold text-navy-900 dark:text-white mb-2">{service.title}</h3>
               <p className="text-sm text-navy-500 dark:text-navy-400 leading-relaxed">{service.desc}</p>
-              <ArrowUpRight className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ArrowUpRight className="w-4 h-4 text-brand-500 dark:text-brand-400 mt-5 opacity-0 group-hover:opacity-100 transition-opacity" />
             </motion.div>
           ))}
         </div>

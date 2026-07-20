@@ -3,7 +3,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* Restrained palette: deep navy, soft blue, subtle cyan, neutral grays */
+  /* Brand palette: deep teal primary, neutral navy grays */
   --color-navy-50: #f0f4f8;
   --color-navy-100: #d9e2ec;
   --color-navy-200: #bcccdc;
@@ -16,10 +16,11 @@
   --color-navy-900: #0a1a30;
   --color-navy-950: #06121f;
 
-  --color-blue-400: #60a5fa;
-  --color-blue-500: #3b82f6;
-  --color-blue-600: #2563eb;
-  --color-blue-700: #1d4ed8;
+  /* Teal brand accent */
+  --color-brand-400: #0fb5b5;
+  --color-brand-500: #008080;
+  --color-brand-600: #006d6d;
+  --color-brand-700: #005a5a;
 
   --color-cyan-400: #22d3ee;
   --color-cyan-500: #06b6d4;
@@ -79,14 +80,14 @@ body {
 
 /* Focus styles for accessibility */
 :focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #008080;
   outline-offset: 2px;
   border-radius: 4px;
 }
 
 /* Gradient text (used sparingly) */
 .text-gradient {
-  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  background: linear-gradient(135deg, #008080, #06b6d4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -95,8 +96,8 @@ body {
 /* Subtle grid background */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(37, 99, 235, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 128, 128, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 128, 128, 0.03) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 

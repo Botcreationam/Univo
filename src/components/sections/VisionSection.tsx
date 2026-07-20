@@ -37,7 +37,7 @@ const roadmap = [
 
 const statusStyles: Record<string, string> = {
   'In Progress': 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
-  'Upcoming': 'bg-blue-600/10 text-blue-600 dark:text-blue-400',
+  'Upcoming': 'bg-brand-500/10 text-brand-500 dark:text-brand-400',
   'Planned': 'bg-amber-500/10 text-amber-600 dark:text-amber-400',
   'Vision': 'bg-purple-500/10 text-purple-600 dark:text-purple-400',
 }
@@ -55,7 +55,7 @@ export default function VisionSection() {
           transition={{ duration: 0.5 }}
           className="max-w-2xl mb-20"
         >
-          <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Vision</span>
+          <span className="text-sm font-semibold text-brand-500 dark:text-brand-400 uppercase tracking-wider">Vision</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
             From Zambia to the world
           </h2>
@@ -71,11 +71,11 @@ export default function VisionSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
-              className="p-8 rounded-xl bg-navy-50 dark:bg-white/5 border border-navy-100 dark:border-white/10 card-hover hover:border-blue-600/30"
+              className="p-8 rounded-xl bg-navy-50 dark:bg-white/5 border border-navy-100 dark:border-white/10 card-hover hover:border-brand-500/30"
             >
               <div className="flex items-start justify-between mb-5">
-                <div className="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center">
-                  <item.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <div className="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center">
+                  <item.icon className="w-5 h-5 text-brand-500 dark:text-brand-400" />
                 </div>
                 <div className="text-right">
                   <span className={`inline-block px-2.5 py-1 text-xs font-semibold rounded-full ${statusStyles[item.status]}`}>
@@ -83,7 +83,7 @@ export default function VisionSection() {
                   </span>
                 </div>
               </div>
-              <div className="text-sm font-bold text-blue-600 dark:text-blue-400 mb-1">{item.year}</div>
+              <div className="text-sm font-bold text-brand-500 dark:text-brand-400 mb-1">{item.year}</div>
               <h3 className="text-lg font-semibold text-navy-900 dark:text-white mb-2">{item.title}</h3>
               <p className="text-sm text-navy-500 dark:text-navy-400 leading-relaxed">{item.desc}</p>
             </motion.div>

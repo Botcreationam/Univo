@@ -1,7 +1,6 @@
 'use client'
 
-import { GraduationCap, GitBranch, Link, Globe, Mail } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { GraduationCap, GitBranch, Link, Globe, MessageCircle } from 'lucide-react'
 
 const footerLinks = {
   Platform: [
@@ -11,10 +10,10 @@ const footerLinks = {
     { label: 'Stories', href: '#stories' },
   ],
   Resources: [
-    { label: 'Scholarships', href: '#services' },
-    { label: 'Career Guidance', href: '#services' },
-    { label: 'Innovation Programs', href: '#services' },
-    { label: 'Digital Resources', href: '#services' },
+    { label: 'Campus Community', href: '#services' },
+    { label: 'AI Study Center', href: '#services' },
+    { label: 'Marketplace', href: '#services' },
+    { label: 'Opportunities', href: '#services' },
   ],
   Company: [
     { label: 'Vision', href: '#vision' },
@@ -27,7 +26,7 @@ const socials = [
   { icon: GitBranch, href: 'https://github.com/Botcreationam/Univo', label: 'GitHub' },
   { icon: Link, href: 'https://www.linkedin.com', label: 'LinkedIn' },
   { icon: Globe, href: 'https://studentlife.tech', label: 'Website' },
-  { icon: Mail, href: '#contact', label: 'Email' },
+  { icon: MessageCircle, href: 'https://wa.me/260978277538', label: 'WhatsApp' },
 ]
 
 export default function Footer() {
@@ -46,20 +45,20 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center">
                 <GraduationCap className="w-5 h-5 text-white" strokeWidth={2.5} />
               </div>
               <span className="text-lg font-bold text-white">UNIVO</span>
             </div>
             <p className="text-navy-300 text-sm leading-relaxed mb-6 max-w-xs">
-              The social network for Zambian students. Connecting talent with opportunity, starting in Zambia with plans to grow globally.
+              Your campus, connected. The social network for Zambian students, linking campus, communities, study tools, marketplace, and opportunities.
             </p>
             <div className="flex items-center gap-2">
               {socials.map(({ icon: Icon, href, label }) => (
                 <button
                   key={label}
                   onClick={() => handleNav(href)}
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-navy-300 hover:text-blue-400 hover:border-blue-600/50 hover:bg-blue-600/10 transition-all"
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-navy-300 hover:text-brand-400 hover:border-brand-500/50 hover:bg-brand-500/10 transition-all"
                   aria-label={label}
                 >
                   <Icon className="w-4 h-4" />
@@ -77,7 +76,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <button
                       onClick={() => handleNav(link.href)}
-                      className="text-navy-300 text-sm hover:text-blue-400 transition-colors text-left"
+                      className="text-navy-300 text-sm hover:text-brand-400 transition-colors text-left"
                     >
                       {link.label}
                     </button>

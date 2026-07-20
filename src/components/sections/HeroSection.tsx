@@ -23,7 +23,7 @@ export default function HeroSection() {
     >
       {/* Subtle grid background only */}
       <div className="absolute inset-0 bg-grid opacity-40 dark:opacity-60" />
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-600/20 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-500/20 to-transparent" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-5 sm:px-6 lg:px-8 text-center pt-20">
         {/* Badge */}
@@ -31,10 +31,10 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 10 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-600/10 border border-blue-600/20 text-blue-600 dark:text-blue-400 text-xs font-semibold mb-8"
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-500 dark:text-brand-400 text-xs font-semibold mb-8"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
-          The social network for Zambian students
+          Your campus, connected.
         </motion.div>
 
         {/* Headline */}
@@ -56,8 +56,8 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-xl mx-auto mt-6 text-lg text-navy-500 dark:text-navy-300 leading-relaxed"
         >
-          UNIVO is the social network helping students across Zambia connect with peers,
-          discover opportunities, find scholarships, and build their futures together.
+          UNIVO connects you to your campus, communities, study tools, marketplace,
+          and opportunities. The social network built for Zambian students.
         </motion.p>
 
         {/* CTAs */}
@@ -69,7 +69,7 @@ export default function HeroSection() {
         >
           <button
             onClick={() => window.open(REDIRECT_URL, '_blank', 'noopener noreferrer')}
-            className="group inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-colors w-full sm:w-auto justify-center"
+            className="group inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-brand-500 hover:bg-brand-600 rounded-xl transition-colors w-full sm:w-auto justify-center"
           >
             Join UNIVO
             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />

@@ -60,7 +60,7 @@ export default function Navbar() {
             className="flex items-center gap-2 cursor-pointer"
             aria-label="UNIVO home"
           >
-            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center">
               <GraduationCap className="w-5 h-5 text-white" strokeWidth={2.5} />
             </div>
             <span className="text-lg font-bold tracking-tight text-navy-900 dark:text-white">
@@ -74,7 +74,7 @@ export default function Navbar() {
               <button
                 key={link.href}
                 onClick={() => handleClick(link.href)}
-                className="px-4 py-2 text-sm font-medium text-navy-600 dark:text-navy-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors rounded-lg cursor-pointer"
+                className="px-4 py-2 text-sm font-medium text-navy-600 dark:text-navy-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors rounded-lg cursor-pointer"
               >
                 {link.label}
               </button>
@@ -94,7 +94,7 @@ export default function Navbar() {
             )}
             <button
               onClick={handleGetStarted}
-              className="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+              className="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-brand-500 hover:bg-brand-600 rounded-lg transition-colors"
             >
               Get Started
             </button>
@@ -123,14 +123,14 @@ export default function Navbar() {
                 <button
                   key={link.href}
                   onClick={() => handleClick(link.href)}
-                  className="block w-full text-left px-4 py-3 text-sm font-medium text-navy-600 dark:text-navy-300 hover:text-blue-600 hover:bg-navy-50 dark:hover:bg-white/5 rounded-lg transition-colors"
+                  className="block w-full text-left px-4 py-3 text-sm font-medium text-navy-600 dark:text-navy-300 hover:text-brand-500 hover:bg-navy-50 dark:hover:bg-white/5 rounded-lg transition-colors"
                 >
                   {link.label}
                 </button>
               ))}
               <button
                 onClick={handleGetStarted}
-                className="w-full mt-2 px-4 py-3 text-sm font-semibold text-white bg-blue-600 rounded-lg"
+                className="w-full mt-2 px-4 py-3 text-sm font-semibold text-white bg-brand-500 rounded-lg"
               >
                 Get Started
               </button>

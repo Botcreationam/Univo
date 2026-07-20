@@ -33,7 +33,7 @@ export default function AboutSection() {
           transition={{ duration: 0.5 }}
           className="max-w-2xl mb-20"
         >
-          <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">About</span>
+          <span className="text-sm font-semibold text-brand-500 dark:text-brand-400 uppercase tracking-wider">About</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
             We exist to unlock potential
           </h2>
@@ -51,10 +51,10 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
-              className="p-8 rounded-xl bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10 card-hover hover:border-blue-600/30"
+              className="p-8 rounded-xl bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10 card-hover hover:border-brand-500/30"
             >
-              <div className="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center mb-5">
-                <value.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              <div className="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mb-5">
+                <value.icon className="w-5 h-5 text-brand-500 dark:text-brand-400" />
               </div>
               <h3 className="font-semibold text-navy-900 dark:text-white mb-2">{value.title}</h3>
               <p className="text-sm text-navy-500 dark:text-navy-400 leading-relaxed">{value.desc}</p>
@@ -79,11 +79,11 @@ export default function AboutSection() {
                 className="flex gap-6 items-start group"
               >
                 <div className="flex flex-col items-center flex-shrink-0">
-                  <div className="w-3 h-3 rounded-full bg-blue-600 ring-4 ring-blue-600/10 group-hover:ring-blue-600/20 transition-all" />
+                  <div className="w-3 h-3 rounded-full bg-brand-500 ring-4 ring-brand-500/10 group-hover:ring-brand-500/20 transition-all" />
                   {i < timeline.length - 1 && <div className="w-px h-full bg-navy-200 dark:bg-white/10 mt-1 min-h-[2.5rem]" />}
                 </div>
                 <div className="pb-2">
-                  <span className="text-sm font-bold text-blue-600 dark:text-blue-400">{item.year}</span>
+                  <span className="text-sm font-bold text-brand-500 dark:text-brand-400">{item.year}</span>
                   <h4 className="font-semibold text-navy-900 dark:text-white mt-1">{item.title}</h4>
                   <p className="text-sm text-navy-500 dark:text-navy-400 mt-1">{item.desc}</p>
                 </div>

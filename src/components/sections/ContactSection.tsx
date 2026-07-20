@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Send, Mail, MapPin, Clock } from 'lucide-react'
+import { Send, Mail, MapPin, MessageCircle, Clock } from 'lucide-react'
 
 const REDIRECT_URL = 'https://studentlife.tech'
 
@@ -41,7 +41,7 @@ export default function ContactSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Contact</span>
+          <span className="text-sm font-semibold text-brand-500 dark:text-brand-400 uppercase tracking-wider">Contact</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
             Ready to start your UNIVO journey?
           </h2>
@@ -59,13 +59,14 @@ export default function ContactSection() {
             className="lg:col-span-2 space-y-8"
           >
             {[
-              { icon: Mail, label: 'Email', value: 'hello@univo.zm' },
+              { icon: Mail, label: 'Email', value: 'botcreation7@gmail.com' },
+              { icon: MessageCircle, label: 'WhatsApp', value: '+260 978 277 538' },
               { icon: MapPin, label: 'Location', value: 'Lusaka, Zambia' },
               { icon: Clock, label: 'Response Time', value: 'Within 24 hours' },
             ].map(({ icon: Icon, label, value }) => (
               <div key={label} className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <div className="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-5 h-5 text-brand-500 dark:text-brand-400" />
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-navy-400 dark:text-navy-500 uppercase tracking-wider">{label}</div>
@@ -92,7 +93,7 @@ export default function ContactSection() {
                     placeholder="Your full name"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-navy-50 dark:bg-white/5 border border-navy-200 dark:border-white/10 text-navy-900 dark:text-white placeholder-navy-300 dark:placeholder-navy-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600/30 transition-all text-sm"
+                    className="w-full px-4 py-3 rounded-lg bg-navy-50 dark:bg-white/5 border border-navy-200 dark:border-white/10 text-navy-900 dark:text-white placeholder-navy-300 dark:placeholder-navy-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500/30 transition-all text-sm"
                     aria-invalid={!!errors.name}
                   />
                   {errors.name && <p className="text-xs text-red-500 mt-1.5">{errors.name}</p>}
@@ -105,7 +106,7 @@ export default function ContactSection() {
                     placeholder="you@university.edu.zm"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-navy-50 dark:bg-white/5 border border-navy-200 dark:border-white/10 text-navy-900 dark:text-white placeholder-navy-300 dark:placeholder-navy-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600/30 transition-all text-sm"
+                    className="w-full px-4 py-3 rounded-lg bg-navy-50 dark:bg-white/5 border border-navy-200 dark:border-white/10 text-navy-900 dark:text-white placeholder-navy-300 dark:placeholder-navy-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500/30 transition-all text-sm"
                     aria-invalid={!!errors.email}
                   />
                   {errors.email && <p className="text-xs text-red-500 mt-1.5">{errors.email}</p>}
@@ -117,7 +118,7 @@ export default function ContactSection() {
                   id="interest"
                   value={form.interest}
                   onChange={(e) => setForm({ ...form, interest: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-navy-50 dark:bg-white/5 border border-navy-200 dark:border-white/10 text-navy-900 dark:text-white focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600/30 transition-all text-sm"
+                  className="w-full px-4 py-3 rounded-lg bg-navy-50 dark:bg-white/5 border border-navy-200 dark:border-white/10 text-navy-900 dark:text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500/30 transition-all text-sm"
                 >
                   <option>Student</option>
                   <option>University Partner</option>
@@ -133,7 +134,7 @@ export default function ContactSection() {
                   placeholder="Tell us how we can help you..."
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-navy-50 dark:bg-white/5 border border-navy-200 dark:border-white/10 text-navy-900 dark:text-white placeholder-navy-300 dark:placeholder-navy-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600/30 transition-all text-sm resize-none"
+                  className="w-full px-4 py-3 rounded-lg bg-navy-50 dark:bg-white/5 border border-navy-200 dark:border-white/10 text-navy-900 dark:text-white placeholder-navy-300 dark:placeholder-navy-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500/30 transition-all text-sm resize-none"
                   aria-invalid={!!errors.message}
                 />
                 {errors.message && <p className="text-xs text-red-500 mt-1.5">{errors.message}</p>}
@@ -141,7 +142,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
