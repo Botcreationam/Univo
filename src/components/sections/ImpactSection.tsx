@@ -5,10 +5,10 @@ import { motion, useInView } from 'framer-motion'
 import { TrendingUp, Building2, Share2, HeartHandshake } from 'lucide-react'
 
 const stats = [
-  { icon: TrendingUp, value: 5000, suffix: '+', label: 'Students Supported', desc: 'Active students benefiting from UNIVO programs and resources', color: 'text-electric-400', bgColor: 'bg-electric-600/10' },
-  { icon: Building2, value: 50, suffix: '+', label: 'Universities Connected', desc: 'Partner institutions across Africa and beyond', color: 'text-cyan-400', bgColor: 'bg-cyan-500/10' },
-  { icon: Share2, value: 200, suffix: '+', label: 'Opportunities Shared', desc: 'Scholarships, internships and programs listed monthly', color: 'text-emerald-400', bgColor: 'bg-emerald-500/10' },
-  { icon: HeartHandshake, value: 10000, suffix: '+', label: 'Community Members', desc: 'Growing network of ambitious students and mentors', color: 'text-purple-400', bgColor: 'bg-purple-500/10' },
+  { icon: TrendingUp, value: 5000, suffix: '+', label: 'Students supported', desc: 'Active students benefiting from UNIVO programs and resources' },
+  { icon: Building2, value: 50, suffix: '+', label: 'Universities connected', desc: 'Partner institutions across Africa and beyond' },
+  { icon: Share2, value: 200, suffix: '+', label: 'Opportunities shared', desc: 'Scholarships, internships and programs listed monthly' },
+  { icon: HeartHandshake, value: 10000, suffix: '+', label: 'Community members', desc: 'Growing network of ambitious students and mentors' },
 ]
 
 function CountUp({ target, suffix, inView }: { target: number; suffix: string; inView: boolean }) {
@@ -17,7 +17,7 @@ function CountUp({ target, suffix, inView }: { target: number; suffix: string; i
   useEffect(() => {
     if (!inView) return
     let start = 0
-    const duration = 2000
+    const duration = 1800
     const step = target / (duration / 16)
     const timer = setInterval(() => {
       start += step
@@ -39,59 +39,42 @@ export default function ImpactSection() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="impact" className="section-padding bg-navy-950 relative overflow-hidden">
-      <div className="absolute inset-0">
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
-          className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] rounded-full border border-electric-600/10"
-        />
-        <motion.div
-          animate={{ rotate: -360 }}
-          transition={{ duration: 45, repeat: Infinity, ease: 'linear' }}
-          className="absolute -bottom-1/2 -left-1/4 w-[600px] h-[600px] rounded-full border border-cyan-500/10"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-electric-600/5 to-transparent" />
-      </div>
+    <section id="impact" className="section-py bg-navy-50 dark:bg-navy-900/30 relative overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-600/5 rounded-full blur-[100px]" />
 
-      <div className="max-w-7xl mx-auto relative" ref={ref}>
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 relative" ref={ref}>
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.5 }}
+          className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-1.5 text-xs font-semibold text-cyan-400 bg-cyan-500/10 rounded-full mb-4 uppercase tracking-widest">
-            Our Impact
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Numbers that tell
-            <br />
-            <span className="gradient-text">our story</span>
+          <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Impact</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
+            Numbers that tell our story
           </h2>
-          <p className="max-w-xl mx-auto text-white/50 text-lg">
-            Every statistic represents a student whose life we've touched, an opportunity unlocked.
+          <p className="max-w-xl mx-auto mt-4 text-lg text-navy-500 dark:text-navy-300">
+            Every statistic represents a student whose life we have touched, an opportunity unlocked.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.15 * i }}
-              whileHover={{ y: -6, transition: { duration: 0.2 } }}
-              className="group p-8 rounded-2xl glass border border-white/5 hover:border-electric-600/30 transition-all text-center"
+              transition={{ duration: 0.5, delay: 0.1 * i }}
+              className="p-6 rounded-xl bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10 text-center card-hover hover:border-blue-600/30"
             >
-              <div className={`w-14 h-14 rounded-2xl ${stat.bgColor} flex items-center justify-center mx-auto mb-5`}>
-                <stat.icon className={`w-7 h-7 ${stat.color}`} />
+              <div className="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center mx-auto mb-4">
+                <stat.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
               </div>
-              <div className={`text-4xl md:text-5xl font-bold mb-2 ${stat.color}`}>
+              <div className="text-3xl md:text-4xl font-bold text-navy-900 dark:text-white mb-1">
                 <CountUp target={stat.value} suffix={stat.suffix} inView={inView} />
               </div>
-              <div className="text-white font-semibold mb-2">{stat.label}</div>
-              <div className="text-white/40 text-sm leading-relaxed">{stat.desc}</div>
+              <div className="text-sm font-semibold text-navy-700 dark:text-navy-200 mb-1">{stat.label}</div>
+              <div className="text-xs text-navy-400 dark:text-navy-500 leading-relaxed">{stat.desc}</div>
             </motion.div>
           ))}
         </div>
