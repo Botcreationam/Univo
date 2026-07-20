@@ -15,6 +15,8 @@ const navLinks = [
   { label: 'Contact', href: '#contact' },
 ]
 
+const REDIRECT_URL = 'https://studentlife.tech'
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -31,6 +33,11 @@ export default function Navbar() {
   const handleClick = (href: string) => {
     setIsOpen(false)
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const handleGetStarted = () => {
+    setIsOpen(false)
+    window.open(REDIRECT_URL, '_blank', 'noopener noreferrer')
   }
 
   return (
@@ -86,7 +93,7 @@ export default function Navbar() {
               </button>
             )}
             <button
-              onClick={() => handleClick('#contact')}
+              onClick={handleGetStarted}
               className="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
             >
               Get Started
@@ -122,7 +129,7 @@ export default function Navbar() {
                 </button>
               ))}
               <button
-                onClick={() => handleClick('#contact')}
+                onClick={handleGetStarted}
                 className="w-full mt-2 px-4 py-3 text-sm font-semibold text-white bg-blue-600 rounded-lg"
               >
                 Get Started

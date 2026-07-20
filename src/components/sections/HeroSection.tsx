@@ -10,6 +10,8 @@ const stats = [
   { value: '200+', label: 'Opportunities listed' },
 ]
 
+const REDIRECT_URL = 'https://studentlife.tech'
+
 export default function HeroSection() {
   const ref = useRef<HTMLElement>(null)
   const inView = useInView(ref, { once: true })
@@ -69,7 +71,7 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10"
         >
           <button
-            onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => window.open(REDIRECT_URL, '_blank', 'noopener noreferrer')}
             className="group inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-colors w-full sm:w-auto justify-center"
           >
             Join UNIVO
