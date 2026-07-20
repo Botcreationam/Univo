@@ -21,12 +21,9 @@ export default function HeroSection() {
       ref={ref}
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-navy-950"
     >
-      {/* Subtle grid background */}
-      <div className="absolute inset-0 bg-grid opacity-50 dark:opacity-100" />
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-600/30 to-transparent" />
-
-      {/* Radial gradient accent */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/5 dark:bg-blue-600/10 rounded-full blur-[120px]" />
+      {/* Subtle grid background only */}
+      <div className="absolute inset-0 bg-grid opacity-40 dark:opacity-60" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-600/20 to-transparent" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-5 sm:px-6 lg:px-8 text-center pt-20">
         {/* Badge */}

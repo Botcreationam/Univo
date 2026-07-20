@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-14"
+          className="text-center mb-16"
         >
           <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Stories</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
@@ -73,10 +73,10 @@ export default function TestimonialsSection() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="p-8 md:p-10 rounded-2xl bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10"
+            className="p-10 md:p-12 rounded-2xl bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10"
           >
-            <Quote className="w-8 h-8 text-blue-600/30 mb-6" />
-            <p className="text-lg md:text-xl text-navy-700 dark:text-navy-200 leading-relaxed mb-8 font-medium">
+            <Quote className="w-8 h-8 text-blue-600/30 mb-8" />
+            <p className="text-lg md:text-xl text-navy-700 dark:text-navy-200 leading-relaxed mb-10 font-medium">
               {testimonials[current].quote}
             </p>
             <div className="flex items-center justify-between">
@@ -99,7 +99,7 @@ export default function TestimonialsSection() {
         </AnimatePresence>
 
         {/* Controls */}
-        <div className="flex items-center justify-center gap-4 mt-8">
+        <div className="flex items-center justify-center gap-4 mt-10">
           <button
             onClick={() => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
             className="w-9 h-9 rounded-lg border border-navy-200 dark:border-white/10 flex items-center justify-center text-navy-500 dark:text-navy-400 hover:border-blue-600/50 hover:text-blue-600 transition-colors"

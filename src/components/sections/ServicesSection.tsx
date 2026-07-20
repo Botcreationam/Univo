@@ -24,27 +24,27 @@ export default function ServicesSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="max-w-2xl mb-14"
+          className="max-w-2xl mb-20"
         >
           <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Services</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
             Everything a student needs to thrive
           </h2>
-          <p className="mt-4 text-lg text-navy-500 dark:text-navy-300">
+          <p className="mt-5 text-lg text-navy-500 dark:text-navy-300">
             Six pillars of student success, designed to work together as one unified platform.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.05 * i }}
-              className="group p-6 rounded-xl bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10 card-hover hover:border-blue-600/30 hover:shadow-lg hover:shadow-blue-600/5 cursor-pointer"
+              className="group p-8 rounded-xl bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10 card-hover hover:border-blue-600/30 cursor-pointer"
             >
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center justify-between mb-5">
                 <div className="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center">
                   <service.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 </div>
@@ -52,7 +52,7 @@ export default function ServicesSection() {
               </div>
               <h3 className="font-semibold text-navy-900 dark:text-white mb-2">{service.title}</h3>
               <p className="text-sm text-navy-500 dark:text-navy-400 leading-relaxed">{service.desc}</p>
-              <ArrowUpRight className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ArrowUpRight className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-5 opacity-0 group-hover:opacity-100 transition-opacity" />
             </motion.div>
           ))}
         </div>

@@ -53,27 +53,27 @@ export default function VisionSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="max-w-2xl mb-14"
+          className="max-w-2xl mb-20"
         >
           <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Vision</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
             Where we are heading next
           </h2>
-          <p className="mt-4 text-lg text-navy-500 dark:text-navy-300">
+          <p className="mt-5 text-lg text-navy-500 dark:text-navy-300">
             Our vision is bold: a world where every African student has equal access to world-class educational opportunities.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {roadmap.map((item, i) => (
             <motion.div
               key={item.year}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
-              className="p-6 rounded-xl bg-navy-50 dark:bg-white/5 border border-navy-100 dark:border-white/10 card-hover hover:border-blue-600/30"
+              className="p-8 rounded-xl bg-navy-50 dark:bg-white/5 border border-navy-100 dark:border-white/10 card-hover hover:border-blue-600/30"
             >
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex items-start justify-between mb-5">
                 <div className="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center">
                   <item.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 </div>

@@ -31,29 +31,29 @@ export default function AboutSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="max-w-2xl mb-16"
+          className="max-w-2xl mb-20"
         >
           <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">About</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
             We exist to unlock potential
           </h2>
-          <p className="mt-4 text-lg text-navy-500 dark:text-navy-300 leading-relaxed">
+          <p className="mt-5 text-lg text-navy-500 dark:text-navy-300 leading-relaxed">
             UNIVO is a student-focused digital platform bridging the gap between ambition and opportunity,
             giving every student the resources, community, and guidance to succeed.
           </p>
         </motion.div>
 
         {/* Values grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
           {values.map((value, i) => (
             <motion.div
               key={value.title}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
-              className="p-6 rounded-xl bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10 card-hover hover:border-blue-600/30 hover:shadow-lg hover:shadow-blue-600/5"
+              className="p-8 rounded-xl bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10 card-hover hover:border-blue-600/30"
             >
-              <div className="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center mb-4">
+              <div className="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center mb-5">
                 <value.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
               </div>
               <h3 className="font-semibold text-navy-900 dark:text-white mb-2">{value.title}</h3>
@@ -68,8 +68,8 @@ export default function AboutSection() {
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <h3 className="text-2xl font-bold text-navy-900 dark:text-white mb-10">Our journey</h3>
-          <div className="space-y-6">
+          <h3 className="text-2xl font-bold text-navy-900 dark:text-white mb-12">Our journey</h3>
+          <div className="space-y-8">
             {timeline.map((item, i) => (
               <motion.div
                 key={item.year}
@@ -80,7 +80,7 @@ export default function AboutSection() {
               >
                 <div className="flex flex-col items-center flex-shrink-0">
                   <div className="w-3 h-3 rounded-full bg-blue-600 ring-4 ring-blue-600/10 group-hover:ring-blue-600/20 transition-all" />
-                  {i < timeline.length - 1 && <div className="w-px h-full bg-navy-200 dark:bg-white/10 mt-1 min-h-[2rem]" />}
+                  {i < timeline.length - 1 && <div className="w-px h-full bg-navy-200 dark:bg-white/10 mt-1 min-h-[2.5rem]" />}
                 </div>
                 <div className="pb-2">
                   <span className="text-sm font-bold text-blue-600 dark:text-blue-400">{item.year}</span>

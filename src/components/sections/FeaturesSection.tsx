@@ -5,6 +5,8 @@ import { motion, useInView } from 'framer-motion'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
+const REDIRECT_URL = 'https://studentlife.tech'
+
 const features = [
   {
     badge: 'For Students',
@@ -48,14 +50,14 @@ export default function FeaturesSection() {
   return (
     <section id="features" className="section-py bg-white dark:bg-navy-950">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl mb-20">
           <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Features</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-3 text-navy-900 dark:text-white">
             Built for how students actually succeed
           </h2>
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-24">
           {features.map((feature, i) => (
             <FeatureBlock key={feature.badge} feature={feature} index={i} />
           ))}
@@ -76,7 +78,7 @@ function FeatureBlock({ feature, index }: { feature: typeof features[0]; index: 
       animate={inView ? { opacity: 1 } : {}}
       transition={{ duration: 0.5 }}
       className={cn(
-        'grid grid-cols-1 lg:grid-cols-2 gap-10 items-center',
+        'grid grid-cols-1 lg:grid-cols-2 gap-12 items-center',
         feature.reverse ? 'lg:grid-flow-col-dense' : ''
       )}
     >
@@ -86,14 +88,14 @@ function FeatureBlock({ feature, index }: { feature: typeof features[0]; index: 
         transition={{ duration: 0.6, delay: 0.1 }}
         className={feature.reverse ? 'lg:col-start-2' : ''}
       >
-        <span className="inline-block px-3 py-1 text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-600/10 rounded-full mb-4">
+        <span className="inline-block px-3 py-1 text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-600/10 rounded-full mb-5">
           {feature.badge}
         </span>
-        <h3 className="text-2xl md:text-3xl font-bold text-navy-900 dark:text-white mb-4 tracking-tight">
+        <h3 className="text-2xl md:text-3xl font-bold text-navy-900 dark:text-white mb-5 tracking-tight">
           {feature.title}
         </h3>
-        <p className="text-navy-500 dark:text-navy-300 leading-relaxed mb-6">{feature.desc}</p>
-        <ul className="space-y-3 mb-6">
+        <p className="text-navy-500 dark:text-navy-300 leading-relaxed mb-8">{feature.desc}</p>
+        <ul className="space-y-3 mb-8">
           {feature.points.map((point) => (
             <li key={point} className="flex items-start gap-3">
               <CheckCircle2 className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
@@ -102,7 +104,7 @@ function FeatureBlock({ feature, index }: { feature: typeof features[0]; index: 
           ))}
         </ul>
         <button
-          onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => window.open(REDIRECT_URL, '_blank', 'noopener noreferrer')}
           className="group inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:gap-3 transition-all"
         >
           Learn more
@@ -117,7 +119,7 @@ function FeatureBlock({ feature, index }: { feature: typeof features[0]; index: 
         transition={{ duration: 0.6, delay: 0.2 }}
         className={feature.reverse ? 'lg:col-start-1 lg:row-start-1' : ''}
       >
-        <div className="aspect-[4/3] rounded-2xl bg-navy-50 dark:bg-white/5 border border-navy-100 dark:border-white/10 p-6 flex items-center justify-center">
+        <div className="aspect-[4/3] rounded-2xl bg-navy-50 dark:bg-white/5 border border-navy-100 dark:border-white/10 p-8 flex items-center justify-center">
           <FeatureVisual index={index} />
         </div>
       </motion.div>
@@ -130,7 +132,7 @@ function FeatureVisual({ index }: { index: number }) {
     return (
       <div className="w-full space-y-3">
         {['Scholarship Match: 94%', 'Applications: 3 Active', 'Mentor Sessions: 2 this week', 'Resources Saved: 12'].map((item, i) => (
-          <div key={i} className="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10">
+          <div key={i} className="flex items-center gap-3 p-4 rounded-lg bg-white dark:bg-white/5 border border-navy-100 dark:border-white/10">
             <div className="w-2 h-2 rounded-full bg-blue-600" />
             <span className="text-navy-600 dark:text-navy-300 text-sm">{item}</span>
           </div>
@@ -140,7 +142,7 @@ function FeatureVisual({ index }: { index: number }) {
   }
   if (index === 1) {
     return (
-      <div className="w-full grid grid-cols-3 gap-2 h-full">
+      <div className="w-full grid grid-cols-3 gap-3 h-full">
         {['Top Match', 'Internship', 'Full-time', 'Remote', 'On-site', 'Graduate'].map((tag, i) => (
           <div
             key={i}
